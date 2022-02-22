@@ -21,12 +21,15 @@ class MainActivity : AppCompatActivity() {
 
     fun setUpEvents() {
 
+
     }
 
     fun setUpValues() {
 
         mAdapter = MainViewPagerAdapter(supportFragmentManager)
         mainViewPager.adapter = mAdapter
+
+        mainTabLayout.setupWithViewPager( mainViewPager )
 
     }
 }
