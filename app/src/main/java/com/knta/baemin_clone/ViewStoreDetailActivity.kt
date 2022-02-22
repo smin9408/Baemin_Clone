@@ -1,6 +1,8 @@
 package com.knta.baemin_clone
 
 import android.Manifest
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -27,6 +29,10 @@ class ViewStoreDetailActivity : AppCompatActivity() {
 //        권한 관련 변수를, 화면이 만들어질 때 한 번만 세팅.
         val pl = object : PermissionListener {
             override fun onPermissionGranted() {
+
+                val myUri = Uri.parse("tel:${mStoreData.phoneNum}")
+                val myIntent = Intent(Intent.ACTION_CALL, myUri)
+                startActivity(myIntent)
 
             }
 
