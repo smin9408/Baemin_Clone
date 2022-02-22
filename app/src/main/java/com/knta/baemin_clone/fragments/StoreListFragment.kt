@@ -38,7 +38,10 @@ class StoreListFragment : Fragment() {
 
         StoreListView.setOnItemClickListener { adapterView, view, position, l ->
 
+            val clickedStore = mPizzaStoreList[position]
+
             val myIntent = Intent(requireContext(), ViewStoreDetailActivity::class.java)
+            myIntent.putExtra("store", clickedStore)
             startActivity(myIntent)
         }
 
