@@ -1,11 +1,13 @@
 package com.knta.baemin_clone.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.knta.baemin_clone.R
+import com.knta.baemin_clone.ViewStoreDetailActivity
 import com.knta.baemin_clone.adapters.StoreAdapter
 import com.knta.baemin_clone.datas.StoreData
 import kotlinx.android.synthetic.main.fragment_store_list.*
@@ -33,6 +35,12 @@ class StoreListFragment : Fragment() {
     }
 
     fun setUpEvents() {
+
+        StoreListView.setOnItemClickListener { adapterView, view, position, l ->
+
+            val myIntent = Intent(requireContext(), ViewStoreDetailActivity::class.java)
+            startActivity(myIntent)
+        }
 
     }
 
