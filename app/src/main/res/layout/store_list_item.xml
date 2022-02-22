@@ -17,8 +17,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="10dp">
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtStoreName"
@@ -27,6 +27,14 @@
             android:text="가게이름"
             android:textColor="@color/black"
             android:textSize="17sp" />
+
+        <com.willy.ratingbar.ScaleRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srb_rating="2"
+            app:srb_starHeight="20dp"
+            app:srb_starPadding="2dp"
+            app:srb_starWidth="20dp" />
 
     </LinearLayout>
 
